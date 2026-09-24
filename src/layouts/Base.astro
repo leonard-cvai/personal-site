@@ -33,14 +33,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@leonard_cvai" />
     {
-      /* Plausible: pageviews plus resume downloads and outbound clicks (e.g. to X). Production builds only. */
+      /* Plausible site-specific script. Tracked events (file downloads, outbound links)
+         are toggled in the Plausible dashboard, not here. Production builds only. */
       import.meta.env.PROD && (
-        <script
-          is:inline
-          defer
-          data-domain="leonardgrazian.com"
-          src="https://plausible.io/js/script.file-downloads.outbound-links.js"
-        />
+        <>
+          <script is:inline async src="https://plausible.io/js/pa-bh3uMhDMrO__lr_fjAfpM.js" />
+          <script is:inline>
+            window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+            plausible.init()
+          </script>
+        </>
       )
     }
   </head>
