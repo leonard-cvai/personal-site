@@ -1,0 +1,63 @@
+/* Theme tokens ported from ekmas/neobrutalism-components (src/styling/globals.css). */
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --border-radius: 5px;
+  --box-shadow-x: 4px;
+  --box-shadow-y: 4px;
+  --reverse-box-shadow-x: -4px;
+  --reverse-box-shadow-y: -4px;
+
+  --heading-font-weight: 700;
+  --base-font-weight: 500;
+  --base-font-family: "DM Sans Variable", sans-serif;
+
+  --background: hsl(214, 95%, 93%);
+  --secondary-background: oklch(100% 0 0);
+  --foreground: oklch(0% 0 0);
+  --main-foreground: oklch(0% 0 0);
+
+  --main: hsl(217, 100%, 66%);
+  --border: oklch(0% 0 0);
+  --ring: oklch(0% 0 0);
+
+  --shadow: var(--box-shadow-x) var(--box-shadow-y) 0px 0px var(--border);
+}
+
+@theme inline {
+  --color-main: var(--main);
+  --color-background: var(--background);
+  --color-secondary-background: var(--secondary-background);
+  --color-foreground: var(--foreground);
+  --color-main-foreground: var(--main-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  --spacing-boxShadowX: var(--box-shadow-x);
+  --spacing-boxShadowY: var(--box-shadow-y);
+  --spacing-reverseBoxShadowX: var(--reverse-box-shadow-x);
+  --spacing-reverseBoxShadowY: var(--reverse-box-shadow-y);
+
+  --radius-base: var(--border-radius);
+  --shadow-shadow: var(--shadow);
+
+  --font-weight-base: var(--base-font-weight);
+  --font-weight-heading: var(--heading-font-weight);
+}
+
+@layer base {
+  body {
+    @apply text-foreground font-base bg-secondary-background;
+    font-family: var(--base-font-family);
+    /* Grid backdrop used across the neobrutalism-components site. */
+    background-image:
+      linear-gradient(to right, #80808033 1px, transparent 1px),
+      linear-gradient(to bottom, #80808033 1px, transparent 1px);
+    background-size: 70px 70px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}

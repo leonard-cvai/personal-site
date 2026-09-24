@@ -1,0 +1,19 @@
+---
+// Port of neobrutalism-components' <Badge>.
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"span"> & { variant?: "default" | "neutral" };
+
+const { variant = "neutral", class: className, ...rest } = Astro.props;
+---
+
+<span
+  class:list={[
+    "inline-flex items-center justify-center rounded-base border-2 border-border px-2.5 py-0.5 text-xs font-base w-fit whitespace-nowrap shrink-0",
+    variant === "default" ? "bg-background text-foreground" : "bg-secondary-background text-foreground",
+    className,
+  ]}
+  {...rest}
+>
+  <slot />
+</span>

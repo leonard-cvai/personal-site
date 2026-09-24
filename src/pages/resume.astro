@@ -1,0 +1,62 @@
+---
+import Base from "../layouts/Base.astro";
+import Button from "../components/Button.astro";
+
+const pdf = "/leonard_grazian_resume.pdf";
+---
+
+<Base title="Resume" description="Leonard Grazian's resume.">
+  <div class="mb-8 flex flex-wrap items-center justify-between gap-4">
+    <h1 class="text-4xl sm:text-5xl">Resume</h1>
+    <div class="flex flex-wrap gap-3">
+      <Button href={pdf} download="Leonard_Grazian_Resume.pdf">Download PDF</Button>
+      <Button href={pdf} variant="neutral" target="_blank" rel="noopener">Open in new tab</Button>
+    </div>
+  </div>
+  <!-- Pages are drawn with PDF.js so the viewer works the same on every browser, including mobile. -->
+  <div
+    id="pdf-viewer"
+    data-src={pdf}
+    class="flex flex-col gap-6"
+    aria-label="Leonard Grazian's resume"
+  >
+    <p id="pdf-status" class="rounded-base border-2 border-border bg-secondary-background p-6 shadow-shadow">
+      Loading resume&hellip;
+    </p>
+  </div>
+</Base>
+
+<script>
+  import { GlobalWorkerOptions, getDocument } from "pdfjs-dist";
+  import workerSrc from "pdfjs-dist/build/pdf.worker.min.mjs?url";
+
+  GlobalWorkerOptions.workerSrc = workerSrc;
+
+  const viewer = document.getElementById("pdf-viewer")!;
+  const status = document.getElementById("pdf-status")!;
+
+  try {
+    const doc = await getDocument({ url: viewer.dataset.src! }).promise;
+    const width = viewer.clientWidth;
+    const dpr = window.devicePixelRatio || 1;
+
+    for (let n = 1; n <= doc.numPages; n++) {
+      const page = await doc.getPage(n);
+      const scale = width / page.getViewport({ scale: 1 }).width;
+      const viewport = page.getViewport({ scale: scale * dpr });
+
+      const canvas = document.createElement("canvas");
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+      canvas.className = "block w-full h-auto rounded-base border-2 border-border bg-white shadow-shadow";
+      canvas.setAttribute("aria-label", `Resume page ${n} of ${doc.numPages}`);
+      viewer.appendChild(canvas);
+
+      await page.render({ canvas, viewport }).promise;
+    }
+    status.remove();
+  } catch (err) {
+    console.error(err);
+    status.textContent = "The resume couldn't be displayed here. Use the Download button above.";
+  }
+</script>

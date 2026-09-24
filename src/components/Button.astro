@@ -1,0 +1,36 @@
+---
+// Port of neobrutalism-components' <Button>. Renders an <a> when given href.
+import type { HTMLAttributes } from "astro/types";
+
+type Props = (HTMLAttributes<"a"> | HTMLAttributes<"button">) & {
+  variant?: "default" | "noShadow" | "neutral" | "reverse";
+  size?: "default" | "sm" | "lg";
+};
+
+const { variant = "default", size = "default", class: className, href, ...rest } = Astro.props as Props & { href?: string };
+
+const base =
+  "inline-flex items-center justify-center whitespace-nowrap rounded-base text-sm font-base transition-all gap-2 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2";
+
+const variants = {
+  default:
+    "text-main-foreground bg-main border-2 border-border shadow-shadow hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none",
+  noShadow: "text-main-foreground bg-main border-2 border-border",
+  neutral:
+    "bg-secondary-background text-foreground border-2 border-border shadow-shadow hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none",
+  reverse:
+    "text-main-foreground bg-main border-2 border-border hover:translate-x-reverseBoxShadowX hover:translate-y-reverseBoxShadowY hover:shadow-shadow",
+};
+
+const sizes = {
+  default: "h-10 px-4 py-2",
+  sm: "h-9 px-3",
+  lg: "h-11 px-8 text-base",
+};
+
+const Tag = href ? "a" : "button";
+---
+
+<Tag href={href} class:list={[base, variants[variant], sizes[size], className]} {...rest}>
+  <slot />
+</Tag>

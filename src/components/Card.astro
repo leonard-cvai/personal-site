@@ -1,0 +1,18 @@
+---
+// Port of neobrutalism-components' <Card>.
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"div">;
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<div
+  class:list={[
+    "rounded-base flex flex-col gap-4 p-6 shadow-shadow border-2 border-border bg-background text-foreground font-base",
+    className,
+  ]}
+  {...rest}
+>
+  <slot />
+</div>

@@ -1,0 +1,30 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import Badge from "../../components/Badge.astro";
+import Button from "../../components/Button.astro";
+import { formatDate } from "../../lib/format";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Base title={post.data.title} description={post.data.description}>
+  <article class="rounded-base border-2 border-border bg-secondary-background p-6 shadow-shadow sm:p-10">
+    <Badge variant="default">
+      <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+    </Badge>
+    <h1 class="mt-4 mb-8 text-4xl sm:text-5xl">{post.data.title}</h1>
+    <div class="prose prose-lg max-w-none prose-headings:font-heading prose-a:decoration-2 prose-a:underline-offset-4 prose-pre:rounded-base prose-pre:border-2 prose-pre:border-border">
+      <Content />
+    </div>
+  </article>
+  <div class="mt-10">
+    <Button href="/" variant="neutral">&larr; All posts</Button>
+  </div>
+</Base>
