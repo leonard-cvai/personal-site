@@ -3,18 +3,18 @@ import Button from "./Button.astro";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/resume/", label: "Resume" },
   { href: "/contact/", label: "Contact" },
 ];
 
 const path = Astro.url.pathname;
-const isActive = (href: string) =>
-  href === "/" ? path === "/" || path.startsWith("/blog/") : path.startsWith(href);
+const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWith(href));
 ---
 
 <header class="sticky top-0 z-10 border-b-2 border-border bg-main">
   <div class="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-4 py-4 sm:px-6">
-    <a href="/" class="text-2xl font-heading tracking-tight">Leonard Grazian</a>
+    <a href="/" class="shrink-0">
+      <img src="/leonard-grazian.png" alt="Leonard Grazian" width="278" height="36" class="h-8 w-auto sm:h-9" />
+    </a>
     <nav class="flex gap-3" aria-label="Main">
       {
         links.map(({ href, label }) => (
