@@ -15,3 +15,17 @@ variable "github_repo" {
   type        = string
   default     = "leonard-cvai/personal-site"
 }
+
+# GitHub's OIDC `sub` claim qualifies the owner and repo with their immutable numeric IDs
+# (repo:owner@<id>/repo@<id>:...). Look them up with: curl https://api.github.com/repos/<owner/repo>
+variable "github_owner_id" {
+  description = "Numeric GitHub ID of the repo owner."
+  type        = number
+  default     = 13444386
+}
+
+variable "github_repo_id" {
+  description = "Numeric GitHub ID of var.github_repo."
+  type        = number
+  default     = 1385650412
+}
