@@ -61,3 +61,64 @@
     @apply font-heading;
   }
 }
+
+/* Prompt diffs in blog posts: generated HTML blocks in src/content/blog/*.md. */
+.prompt-diff {
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border: 2px solid var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  background: var(--secondary-background);
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.prompt-diff .hdr {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--background);
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.prompt-diff .hdr::-webkit-details-marker { display: none; }
+.prompt-diff .hdr:hover { background: var(--main); }
+.prompt-diff .hdr:focus-visible { outline: 2px solid var(--ring); outline-offset: -4px; }
+.prompt-diff[open] .hdr { border-bottom: 2px solid var(--border); }
+.prompt-diff .chev { flex: none; transition: transform 150ms ease; }
+.prompt-diff[open] .chev { transform: rotate(90deg); }
+.prompt-diff .stat { font-weight: 600; }
+.prompt-diff .plus { color: #1a7f37; }
+.prompt-diff .minus { color: #cf222e; }
+.prompt-diff .toggle {
+  margin-left: auto;
+  padding: 0 0.5rem;
+  border: 2px solid var(--border);
+  border-radius: var(--border-radius);
+  background: var(--secondary-background);
+  font-family: var(--base-font-family);
+  font-size: 0.8rem;
+}
+.prompt-diff .hide, .prompt-diff[open] .show { display: none; }
+.prompt-diff[open] .hide { display: inline; }
+@media (prefers-reduced-motion: reduce) { .prompt-diff .chev { transition: none; } }
+.prompt-diff .ln {
+  display: grid;
+  grid-template-columns: 2.5ch 2.5ch 1.5ch minmax(0, 1fr);
+  column-gap: 0.75ch;
+  padding: 0.05rem 0.75rem 0.05rem 0.5rem;
+}
+.prompt-diff .ln > span:nth-child(-n + 2) { color: #6b7280; text-align: right; user-select: none; }
+.prompt-diff .sign { text-align: center; user-select: none; }
+.prompt-diff .txt { white-space: pre-wrap; overflow-wrap: anywhere; }
+.prompt-diff .label .txt { font-weight: 700; }
+.prompt-diff .add { background: #e6ffec; }
+.prompt-diff .add .sign { color: #1a7f37; }
+.prompt-diff .del { background: #ffebe9; }
+.prompt-diff .del .sign { color: #cf222e; }
+.prompt-diff .skip { background: #f3f4f6; color: #6b7280; }

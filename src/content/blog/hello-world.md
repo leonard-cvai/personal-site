@@ -2,6 +2,7 @@
 title: "Hello, world"
 description: "A placeholder post showing how posts are written. Replace me."
 date: 2026-09-24
+draft: true
 ---
 
 This is a placeholder post. To publish a new one, add a Markdown file to
