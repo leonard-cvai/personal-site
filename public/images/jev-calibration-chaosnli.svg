@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 538" role="img" aria-labelledby="t">
+  <title id="t">ChaosNLI: Jev&#x27;s score vs the share of 100 annotators, by score bin</title>
+  <style>
+    text { font-family: "DM Sans Variable", "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 14px; font-weight: 500; fill: #000; font-variant-numeric: tabular-nums; }
+    .b { font-weight: 700; }
+    .m { fill: #4b5563; font-size: 12px; }
+    .grid { stroke: #e5e7eb; stroke-width: 1; }
+    .base { stroke: #9ca3af; stroke-width: 1; }
+    .row { stroke: #e5e7eb; stroke-width: 1; }
+    .band { fill: #d1d5db; }
+    .gap { stroke: #000; stroke-width: 2; }
+    .pred { fill: #5294ff; stroke: #000; stroke-width: 2; }
+    .obs { fill: #fff; stroke: #000; stroke-width: 2.5; }
+  </style>
+  <rect width="760" height="538" fill="#fff"/>
+  <circle class="pred" cx="16" cy="14" r="6"/>
+  <text x="28" y="18">Jev’s average score</text>
+  <circle class="obs" cx="16" cy="40" r="6"/>
+  <text x="28" y="44">Share of 100 annotators who chose H1</text>
+  <rect class="band" x="10" y="59" width="26" height="14" rx="3"/>
+  <text x="44" y="70">95% sampling range</text>
+  <text class="m" x="750" y="18" text-anchor="end">Score bins of width 0.1</text>
+  <line class="grid" x1="150" x2="150" y1="102" y2="528"/>
+  <text class="m" x="150" y="96" text-anchor="middle">0%</text>
+  <line class="grid" x1="247.5" x2="247.5" y1="102" y2="528"/>
+  <text class="m" x="247.5" y="96" text-anchor="middle">25%</text>
+  <line class="grid" x1="345.0" x2="345.0" y1="102" y2="528"/>
+  <text class="m" x="345.0" y="96" text-anchor="middle">50%</text>
+  <line class="grid" x1="442.5" x2="442.5" y1="102" y2="528"/>
+  <text class="m" x="442.5" y="96" text-anchor="middle">75%</text>
+  <line class="grid" x1="540" x2="540" y1="102" y2="528"/>
+  <text class="m" x="540" y="96" text-anchor="middle">100%</text>
+  <text class="m" x="600" y="96" text-anchor="end">Jev</text>
+  <text class="m" x="672" y="96" text-anchor="end">Crowd</text>
+  <text class="m" x="744" y="96" text-anchor="end">Gap (pp)</text>
+  <line class="row" x1="0" x2="760" y1="108" y2="108"/>
+  <text class="b" x="10" y="127.0">0.0–0.1</text>
+  <text class="m" x="10" y="143.0">110 stories</text>
+  <line class="base" x1="150" x2="540" y1="129.0" y2="129.0"/>
+  <rect class="band" x="160.6" y="122.0" width="8.4" height="14" rx="3"/>
+  <line class="gap" x1="174.8" x2="164.9" y1="129.0" y2="129.0"/>
+  <circle class="obs" cx="164.9" cy="129.0" r="6"/>
+  <circle class="pred" cx="174.8" cy="129.0" r="6"/>
+  <text x="600" y="134.0" text-anchor="end">6.4%</text>
+  <text x="672" y="134.0" text-anchor="end">3.8%</text>
+  <text x="744" y="134.0" text-anchor="end">+2.6</text>
+  <line class="row" x1="0" x2="760" y1="150" y2="150"/>
+  <text class="b" x="10" y="169.0">0.1–0.2</text>
+  <text class="m" x="10" y="185.0">85 stories</text>
+  <line class="base" x1="150" x2="540" y1="171.0" y2="171.0"/>
+  <rect class="band" x="176.9" y="164.0" width="22.2" height="14" rx="3"/>
+  <line class="gap" x1="203.5" x2="188.0" y1="171.0" y2="171.0"/>
+  <circle class="obs" cx="188.0" cy="171.0" r="6"/>
+  <circle class="pred" cx="203.5" cy="171.0" r="6"/>
+  <text x="600" y="176.0" text-anchor="end">13.7%</text>
+  <text x="672" y="176.0" text-anchor="end">9.7%</text>
+  <text x="744" y="176.0" text-anchor="end">+4.0</text>
+  <line class="row" x1="0" x2="760" y1="192" y2="192"/>
+  <text class="b" x="10" y="211.0">0.2–0.3</text>
+  <text class="m" x="10" y="227.0">43 stories</text>
+  <line class="base" x1="150" x2="540" y1="213.0" y2="213.0"/>
+  <rect class="band" x="233.5" y="206.0" width="70.1" height="14" rx="3"/>
+  <line class="gap" x1="242.3" x2="268.5" y1="213.0" y2="213.0"/>
+  <circle class="obs" cx="268.5" cy="213.0" r="6"/>
+  <circle class="pred" cx="242.3" cy="213.0" r="6"/>
+  <text x="600" y="218.0" text-anchor="end">23.7%</text>
+  <text x="672" y="218.0" text-anchor="end">30.4%</text>
+  <text x="744" y="218.0" text-anchor="end">−6.7</text>
+  <line class="row" x1="0" x2="760" y1="234" y2="234"/>
+  <text class="b" x="10" y="253.0">0.3–0.4</text>
+  <text class="m" x="10" y="269.0">32 stories</text>
+  <line class="base" x1="150" x2="540" y1="255.0" y2="255.0"/>
+  <rect class="band" x="261.9" y="248.0" width="72.2" height="14" rx="3"/>
+  <line class="gap" x1="281.9" x2="298.0" y1="255.0" y2="255.0"/>
+  <circle class="obs" cx="298.0" cy="255.0" r="6"/>
+  <circle class="pred" cx="281.9" cy="255.0" r="6"/>
+  <text x="600" y="260.0" text-anchor="end">33.8%</text>
+  <text x="672" y="260.0" text-anchor="end">37.9%</text>
+  <text x="744" y="260.0" text-anchor="end">−4.1</text>
+  <line class="row" x1="0" x2="760" y1="276" y2="276"/>
+  <text class="b" x="10" y="295.0">0.4–0.5</text>
+  <text class="m" x="10" y="311.0">26 stories</text>
+  <line class="base" x1="150" x2="540" y1="297.0" y2="297.0"/>
+  <rect class="band" x="268.4" y="290.0" width="93.1" height="14" rx="3"/>
+  <line class="gap" x1="330.8" x2="315.0" y1="297.0" y2="297.0"/>
+  <circle class="obs" cx="315.0" cy="297.0" r="6"/>
+  <circle class="pred" cx="330.8" cy="297.0" r="6"/>
+  <text x="600" y="302.0" text-anchor="end">46.3%</text>
+  <text x="672" y="302.0" text-anchor="end">42.3%</text>
+  <text x="744" y="302.0" text-anchor="end">+4.0</text>
+  <line class="row" x1="0" x2="760" y1="318" y2="318"/>
+  <text class="b" x="10" y="337.0">0.5–0.6</text>
+  <text class="m" x="10" y="353.0">30 stories</text>
+  <line class="base" x1="150" x2="540" y1="339.0" y2="339.0"/>
+  <rect class="band" x="301.1" y="332.0" width="85.4" height="14" rx="3"/>
+  <line class="gap" x1="360.7" x2="343.8" y1="339.0" y2="339.0"/>
+  <circle class="obs" cx="343.8" cy="339.0" r="6"/>
+  <circle class="pred" cx="360.7" cy="339.0" r="6"/>
+  <text x="600" y="344.0" text-anchor="end">54.0%</text>
+  <text x="672" y="344.0" text-anchor="end">49.7%</text>
+  <text x="744" y="344.0" text-anchor="end">+4.3</text>
+  <line class="row" x1="0" x2="760" y1="360" y2="360"/>
+  <text class="b" x="10" y="379.0">0.6–0.7</text>
+  <text class="m" x="10" y="395.0">43 stories</text>
+  <line class="base" x1="150" x2="540" y1="381.0" y2="381.0"/>
+  <rect class="band" x="369.1" y="374.0" width="61.3" height="14" rx="3"/>
+  <line class="gap" x1="400.1" x2="399.7" y1="381.0" y2="381.0"/>
+  <circle class="obs" cx="399.7" cy="381.0" r="6"/>
+  <circle class="pred" cx="400.1" cy="381.0" r="6"/>
+  <text x="600" y="386.0" text-anchor="end">64.1%</text>
+  <text x="672" y="386.0" text-anchor="end">64.0%</text>
+  <text x="744" y="386.0" text-anchor="end">+0.1</text>
+  <line class="row" x1="0" x2="760" y1="402" y2="402"/>
+  <text class="b" x="10" y="421.0">0.7–0.8</text>
+  <text class="m" x="10" y="437.0">49 stories</text>
+  <line class="base" x1="150" x2="540" y1="423.0" y2="423.0"/>
+  <rect class="band" x="418.9" y="416.0" width="48.9" height="14" rx="3"/>
+  <line class="gap" x1="440.4" x2="443.3" y1="423.0" y2="423.0"/>
+  <circle class="obs" cx="443.3" cy="423.0" r="6"/>
+  <circle class="pred" cx="440.4" cy="423.0" r="6"/>
+  <text x="600" y="428.0" text-anchor="end">74.5%</text>
+  <text x="672" y="428.0" text-anchor="end">75.2%</text>
+  <text x="744" y="428.0" text-anchor="end">−0.7</text>
+  <line class="row" x1="0" x2="760" y1="444" y2="444"/>
+  <text class="b" x="10" y="463.0">0.8–0.9</text>
+  <text class="m" x="10" y="479.0">85 stories</text>
+  <line class="base" x1="150" x2="540" y1="465.0" y2="465.0"/>
+  <rect class="band" x="463.3" y="458.0" width="35.6" height="14" rx="3"/>
+  <line class="gap" x1="482.4" x2="481.1" y1="465.0" y2="465.0"/>
+  <circle class="obs" cx="481.1" cy="465.0" r="6"/>
+  <circle class="pred" cx="482.4" cy="465.0" r="6"/>
+  <text x="600" y="470.0" text-anchor="end">85.2%</text>
+  <text x="672" y="470.0" text-anchor="end">84.9%</text>
+  <text x="744" y="470.0" text-anchor="end">+0.3</text>
+  <line class="row" x1="0" x2="760" y1="486" y2="486"/>
+  <text class="b" x="10" y="505.0">0.9–1.0</text>
+  <text class="m" x="10" y="521.0">109 stories</text>
+  <line class="base" x1="150" x2="540" y1="507.0" y2="507.0"/>
+  <rect class="band" x="513.9" y="500.0" width="12.3" height="14" rx="3"/>
+  <line class="gap" x1="513.3" x2="520.1" y1="507.0" y2="507.0"/>
+  <circle class="obs" cx="520.1" cy="507.0" r="6"/>
+  <circle class="pred" cx="513.3" cy="507.0" r="6"/>
+  <text x="600" y="512.0" text-anchor="end">93.2%</text>
+  <text x="672" y="512.0" text-anchor="end">94.9%</text>
+  <text x="744" y="512.0" text-anchor="end">−1.7</text>
+</svg>

@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 730" role="img" aria-labelledby="t">
+  <title id="t">Word-in-Context: Jev&#x27;s score vs the actual share, by score bin</title>
+  <style>
+    text { font-family: "DM Sans Variable", "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 15px; font-weight: 500; fill: #000; font-variant-numeric: tabular-nums; }
+    .b { font-weight: 700; }
+    .m { fill: #4b5563; font-size: 13px; }
+    .grid { stroke: #e5e7eb; stroke-width: 1; }
+    .base { stroke: #9ca3af; stroke-width: 1; }
+    .row { stroke: #e5e7eb; stroke-width: 1; }
+    .band { fill: #d1d5db; }
+    .gap { stroke: #000; stroke-width: 2; }
+    .pred { fill: #5294ff; stroke: #000; stroke-width: 2; }
+    .obs { fill: #fff; stroke: #000; stroke-width: 2.5; }
+  </style>
+  <rect width="340" height="730" fill="#fff"/>
+  <circle class="pred" cx="14" cy="14" r="6"/>
+  <text x="26" y="18">Jev’s average score</text>
+  <circle class="obs" cx="14" cy="40" r="6"/>
+  <text x="26" y="44">Share of pairs with the same sense</text>
+  <rect class="band" x="8" y="59" width="26" height="14" rx="3"/>
+  <text x="42" y="70">95% sampling range</text>
+  <text class="m" x="14" y="92" text-anchor="start">0%</text>
+  <text class="m" x="92.0" y="92" text-anchor="middle">25%</text>
+  <text class="m" x="170.0" y="92" text-anchor="middle">50%</text>
+  <text class="m" x="248.0" y="92" text-anchor="middle">75%</text>
+  <text class="m" x="326" y="92" text-anchor="end">100%</text>
+  <line class="row" x1="0" x2="340" y1="104" y2="104"/>
+  <text x="8" y="124"><tspan class="b">0.0–0.1</tspan><tspan class="m"> · 306 pairs</tspan></text>
+  <text x="332" y="124" text-anchor="end">6.9% vs 2.9%</text>
+  <line class="grid" x1="14" x2="14" y1="139" y2="157"/>
+  <line class="grid" x1="92.0" x2="92.0" y1="139" y2="157"/>
+  <line class="grid" x1="170.0" x2="170.0" y1="139" y2="157"/>
+  <line class="grid" x1="248.0" x2="248.0" y1="139" y2="157"/>
+  <line class="grid" x1="326" x2="326" y1="139" y2="157"/>
+  <line class="base" x1="14" x2="326" y1="148" y2="148"/>
+  <rect class="band" x="17.3" y="141" width="11.8" height="14" rx="3"/>
+  <line class="gap" x1="35.5" x2="23.2" y1="148" y2="148"/>
+  <circle class="obs" cx="23.2" cy="148" r="6"/>
+  <circle class="pred" cx="35.5" cy="148" r="6"/>
+  <line class="row" x1="0" x2="340" y1="166" y2="166"/>
+  <text x="8" y="186"><tspan class="b">0.1–0.2</tspan><tspan class="m"> · 516 pairs</tspan></text>
+  <text x="332" y="186" text-anchor="end">13.9% vs 8.3%</text>
+  <line class="grid" x1="14" x2="14" y1="201" y2="219"/>
+  <line class="grid" x1="92.0" x2="92.0" y1="201" y2="219"/>
+  <line class="grid" x1="170.0" x2="170.0" y1="201" y2="219"/>
+  <line class="grid" x1="248.0" x2="248.0" y1="201" y2="219"/>
+  <line class="grid" x1="326" x2="326" y1="201" y2="219"/>
+  <line class="base" x1="14" x2="326" y1="210" y2="210"/>
+  <rect class="band" x="32.6" y="203" width="14.9" height="14" rx="3"/>
+  <line class="gap" x1="57.3" x2="40.0" y1="210" y2="210"/>
+  <circle class="obs" cx="40.0" cy="210" r="6"/>
+  <circle class="pred" cx="57.3" cy="210" r="6"/>
+  <line class="row" x1="0" x2="340" y1="228" y2="228"/>
+  <text x="8" y="248"><tspan class="b">0.2–0.3</tspan><tspan class="m"> · 255 pairs</tspan></text>
+  <text x="332" y="248" text-anchor="end">24.5% vs 22.0%</text>
+  <line class="grid" x1="14" x2="14" y1="263" y2="281"/>
+  <line class="grid" x1="92.0" x2="92.0" y1="263" y2="281"/>
+  <line class="grid" x1="170.0" x2="170.0" y1="263" y2="281"/>
+  <line class="grid" x1="248.0" x2="248.0" y1="263" y2="281"/>
+  <line class="grid" x1="326" x2="326" y1="263" y2="281"/>
+  <line class="base" x1="14" x2="326" y1="272" y2="272"/>
+  <rect class="band" x="66.6" y="265" width="31.8" height="14" rx="3"/>
+  <line class="gap" x1="90.6" x2="82.5" y1="272" y2="272"/>
+  <circle class="obs" cx="82.5" cy="272" r="6"/>
+  <circle class="pred" cx="90.6" cy="272" r="6"/>
+  <line class="row" x1="0" x2="340" y1="290" y2="290"/>
+  <text x="8" y="310"><tspan class="b">0.3–0.4</tspan><tspan class="m"> · 199 pairs</tspan></text>
+  <text x="332" y="310" text-anchor="end">34.4% vs 38.7%</text>
+  <line class="grid" x1="14" x2="14" y1="325" y2="343"/>
+  <line class="grid" x1="92.0" x2="92.0" y1="325" y2="343"/>
+  <line class="grid" x1="170.0" x2="170.0" y1="325" y2="343"/>
+  <line class="grid" x1="248.0" x2="248.0" y1="325" y2="343"/>
+  <line class="grid" x1="326" x2="326" y1="325" y2="343"/>
+  <line class="base" x1="14" x2="326" y1="334" y2="334"/>
+  <rect class="band" x="113.6" y="327" width="42.3" height="14" rx="3"/>
+  <line class="gap" x1="121.4" x2="134.7" y1="334" y2="334"/>
+  <circle class="obs" cx="134.7" cy="334" r="6"/>
+  <circle class="pred" cx="121.4" cy="334" r="6"/>
+  <line class="row" x1="0" x2="340" y1="352" y2="352"/>
+  <text x="8" y="372"><tspan class="b">0.4–0.5</tspan><tspan class="m"> · 203 pairs</tspan></text>
+  <text x="332" y="372" text-anchor="end">44.5% vs 46.8%</text>
+  <line class="grid" x1="14" x2="14" y1="387" y2="405"/>
+  <line class="grid" x1="92.0" x2="92.0" y1="387" y2="405"/>
+  <line class="grid" x1="170.0" x2="170.0" y1="387" y2="405"/>
+  <line class="grid" x1="248.0" x2="248.0" y1="387" y2="405"/>
+  <line class="grid" x1="326" x2="326" y1="387" y2="405"/>
+  <line class="base" x1="14" x2="326" y1="396" y2="396"/>
+  <rect class="band" x="138.5" y="389" width="42.9" height="14" rx="3"/>
+  <line class="gap" x1="153.0" x2="160.0" y1="396" y2="396"/>
+  <circle class="obs" cx="160.0" cy="396" r="6"/>
+  <circle class="pred" cx="153.0" cy="396" r="6"/>
+  <line class="row" x1="0" x2="340" y1="414" y2="414"/>
+  <text x="8" y="434"><tspan class="b">0.5–0.6</tspan><tspan class="m"> · 216 pairs</tspan></text>
+  <text x="332" y="434" text-anchor="end">54.5% vs 54.6%</text>
+  <line class="grid" x1="14" x2="14" y1="449" y2="467"/>
+  <line class="grid" x1="92.0" x2="92.0" y1="449" y2="467"/>
+  <line class="grid" x1="170.0" x2="170.0" y1="449" y2="467"/>
+  <line class="grid" x1="248.0" x2="248.0" y1="449" y2="467"/>
+  <line class="grid" x1="326" x2="326" y1="449" y2="467"/>
+  <line class="base" x1="14" x2="326" y1="458" y2="458"/>
+  <rect class="band" x="163.7" y="451" width="41.5" height="14" rx="3"/>
+  <line class="gap" x1="184.1" x2="184.4" y1="458" y2="458"/>
+  <circle class="obs" cx="184.4" cy="458" r="6"/>
+  <circle class="pred" cx="184.1" cy="458" r="6"/>
+  <line class="row" x1="0" x2="340" y1="476" y2="476"/>
+  <text x="8" y="496"><tspan class="b">0.6–0.7</tspan><tspan class="m"> · 277 pairs</tspan></text>
+  <text x="332" y="496" text-anchor="end">64.7% vs 65.3%</text>
+  <line class="grid" x1="14" x2="14" y1="511" y2="529"/>
+  <line class="grid" x1="92.0" x2="92.0" y1="511" y2="529"/>
+  <line class="grid" x1="170.0" x2="170.0" y1="511" y2="529"/>
+  <line class="grid" x1="248.0" x2="248.0" y1="511" y2="529"/>
+  <line class="grid" x1="326" x2="326" y1="511" y2="529"/>
+  <line class="base" x1="14" x2="326" y1="520" y2="520"/>
+  <rect class="band" x="200.4" y="513" width="35.0" height="14" rx="3"/>
+  <line class="gap" x1="215.9" x2="217.9" y1="520" y2="520"/>
+  <circle class="obs" cx="217.9" cy="520" r="6"/>
+  <circle class="pred" cx="215.9" cy="520" r="6"/>
+  <line class="row" x1="0" x2="340" y1="538" y2="538"/>
+  <text x="8" y="558"><tspan class="b">0.7–0.8</tspan><tspan class="m"> · 317 pairs</tspan></text>
+  <text x="332" y="558" text-anchor="end">75.0% vs 76.7%</text>
+  <line class="grid" x1="14" x2="14" y1="573" y2="591"/>
+  <line class="grid" x1="92.0" x2="92.0" y1="573" y2="591"/>
+  <line class="grid" x1="170.0" x2="170.0" y1="573" y2="591"/>
+  <line class="grid" x1="248.0" x2="248.0" y1="573" y2="591"/>
+  <line class="grid" x1="326" x2="326" y1="573" y2="591"/>
+  <line class="base" x1="14" x2="326" y1="582" y2="582"/>
+  <rect class="band" x="238.6" y="575" width="29.1" height="14" rx="3"/>
+  <line class="gap" x1="248.0" x2="253.2" y1="582" y2="582"/>
+  <circle class="obs" cx="253.2" cy="582" r="6"/>
+  <circle class="pred" cx="248.0" cy="582" r="6"/>
+  <line class="row" x1="0" x2="340" y1="600" y2="600"/>
+  <text x="8" y="620"><tspan class="b">0.8–0.9</tspan><tspan class="m"> · 457 pairs</tspan></text>
+  <text x="332" y="620" text-anchor="end">84.6% vs 88.6%</text>
+  <line class="grid" x1="14" x2="14" y1="635" y2="653"/>
+  <line class="grid" x1="92.0" x2="92.0" y1="635" y2="653"/>
+  <line class="grid" x1="170.0" x2="170.0" y1="635" y2="653"/>
+  <line class="grid" x1="248.0" x2="248.0" y1="635" y2="653"/>
+  <line class="grid" x1="326" x2="326" y1="635" y2="653"/>
+  <line class="base" x1="14" x2="326" y1="644" y2="644"/>
+  <rect class="band" x="281.4" y="637" width="18.2" height="14" rx="3"/>
+  <line class="gap" x1="278.1" x2="290.5" y1="644" y2="644"/>
+  <circle class="obs" cx="290.5" cy="644" r="6"/>
+  <circle class="pred" cx="278.1" cy="644" r="6"/>
+  <line class="row" x1="0" x2="340" y1="662" y2="662"/>
+  <text x="8" y="682"><tspan class="b">0.9–1.0</tspan><tspan class="m"> · 320 pairs</tspan></text>
+  <text x="332" y="682" text-anchor="end">92.5% vs 95.6%</text>
+  <line class="grid" x1="14" x2="14" y1="697" y2="715"/>
+  <line class="grid" x1="92.0" x2="92.0" y1="697" y2="715"/>
+  <line class="grid" x1="170.0" x2="170.0" y1="697" y2="715"/>
+  <line class="grid" x1="248.0" x2="248.0" y1="697" y2="715"/>
+  <line class="grid" x1="326" x2="326" y1="697" y2="715"/>
+  <line class="base" x1="14" x2="326" y1="706" y2="706"/>
+  <rect class="band" x="305.3" y="699" width="14.0" height="14" rx="3"/>
+  <line class="gap" x1="302.5" x2="312.4" y1="706" y2="706"/>
+  <circle class="obs" cx="312.4" cy="706" r="6"/>
+  <circle class="pred" cx="302.5" cy="706" r="6"/>
+</svg>
