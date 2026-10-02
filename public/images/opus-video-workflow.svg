@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1030 110" role="img" aria-labelledby="t">
+  <title id="t">The AI video workflow</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#000"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "DM Sans Variable", "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 17px; font-weight: 600; fill: #000; text-anchor: middle; }
+    .box { stroke: #000; stroke-width: 2; }
+    .shadow { fill: #000; }
+    .line { fill: none; stroke: #000; stroke-width: 2.5; marker-end: url(#a); }
+  </style>
+  <rect width="1030" height="110" fill="#fff"/>
+  <rect class="shadow" x="24" y="24" width="210" height="70" rx="5"/>
+  <rect class="box" x="20" y="20" width="210" height="70" rx="5" fill="#dde9fe"/>
+  <text x="125" y="61">References</text>
+  <rect class="shadow" x="284" y="24" width="210" height="70" rx="5"/>
+  <rect class="box" x="280" y="20" width="210" height="70" rx="5" fill="#fff"/>
+  <text x="385" y="61">Keyframes</text>
+  <rect class="shadow" x="544" y="24" width="210" height="70" rx="5"/>
+  <rect class="box" x="540" y="20" width="210" height="70" rx="5" fill="#fff"/>
+  <text x="645" y="61">Video clips</text>
+  <rect class="shadow" x="804" y="24" width="210" height="70" rx="5"/>
+  <rect class="box" x="800" y="20" width="210" height="70" rx="5" fill="#5294ff"/>
+  <text x="905" y="61">Editing</text>
+  <path class="line" d="M230 55 H276"/>
+  <path class="line" d="M490 55 H536"/>
+  <path class="line" d="M750 55 H796"/>
+</svg>

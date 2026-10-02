@@ -122,3 +122,5 @@
 .prompt-diff .del { background: #ffebe9; }
 .prompt-diff .del .sign { color: #cf222e; }
 .prompt-diff .skip { background: #f3f4f6; color: #6b7280; }
+.prompt-diff .hl { background: #fff4b3; }
+.prompt-diff > img { display: block; width: 100%; height: auto; }
