@@ -9,6 +9,9 @@ const blog = defineCollection({
     description: z.string(),
     date: z.coerce.date(),
     draft: z.boolean().default(false),
+    // Link preview image (og:image), a path under public/, ideally 1200x630.
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
   }),
 });
 

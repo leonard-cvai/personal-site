@@ -6,15 +6,23 @@ import Header from "../components/Header.astro";
 interface Props {
   title?: string;
   description?: string;
+  type?: "website" | "article";
+  image?: string;
+  imageAlt?: string;
 }
 
 const siteName = "Leonard Grazian";
 const {
   title,
   description = "Writing by Leonard Grazian.",
+  type = "website",
+  image,
+  imageAlt,
 } = Astro.props;
 const fullTitle = title ? `${title} | ${siteName}` : siteName;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+// Link previews need an absolute image URL.
+const imageUrl = image && new URL(image, Astro.site);
 ---
 
 <!doctype html>
@@ -26,11 +34,21 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary" />
+    {
+      imageUrl && (
+        <>
+          <meta property="og:image" content={imageUrl} />
+          {imageAlt && <meta property="og:image:alt" content={imageAlt} />}
+          <meta name="twitter:image" content={imageUrl} />
+          {imageAlt && <meta name="twitter:image:alt" content={imageAlt} />}
+        </>
+      )
+    }
+    <meta name="twitter:card" content={imageUrl ? "summary_large_image" : "summary"} />
     <meta name="twitter:site" content="@leonard_cvai" />
     {
       /* Plausible site-specific script. Tracked events (file downloads, outbound links)

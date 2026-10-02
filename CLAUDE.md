@@ -52,6 +52,8 @@ title: "Post title"
 description: "One-line summary shown on the home page card."
 date: 2026-09-24
 draft: false   # optional; true hides it from the list and doesn't build the page
+image: "/images/<slug>-og.jpg"   # optional link-preview image, 1200x630; turns on the large X card
+imageAlt: "What the preview image shows."   # optional
 ---
 ```
 

@@ -1,6 +1,8 @@
 ---
 title: "How Opus 5.5 Makes Videos"
 description: "What Opus 5.5 does to edit AI video well."
+image: "/images/opus-video-og.jpg"
+imageAlt: "The AI character from the video, painted in 80s neon pop style, with a glowing orange visor."
 date: 2026-10-02
 draft: false
 ---

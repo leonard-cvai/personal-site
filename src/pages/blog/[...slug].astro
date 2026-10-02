@@ -14,7 +14,13 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<Base title={post.data.title} description={post.data.description}>
+<Base
+  title={post.data.title}
+  description={post.data.description}
+  type="article"
+  image={post.data.image}
+  imageAlt={post.data.imageAlt}
+>
   <article class="rounded-base border-2 border-border bg-secondary-background p-6 shadow-shadow sm:p-10">
     <Badge variant="default">
       <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
